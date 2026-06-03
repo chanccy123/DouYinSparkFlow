@@ -2,12 +2,12 @@ name: DouYin Spark Flow Schedule Run
 on:
   workflow_dispatch: # 允许手动触发
   schedule: # 定时任务
-    - cron: "40 16 * * *" # 每天 16:01 UTC（对应北京时间 00:01）
+    - cron: "50 16 * * *" # 每天 16:01 UTC（对应北京时间 00:01）
 jobs:
   run-main:
     timeout-minutes: 20
     runs-on: ubuntu-latest
-    environment: user-data
+    environment: user_data
     steps:
     - uses: actions/checkout@v4
     - name: Set up Python
